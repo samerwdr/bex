@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeSexy - Join Now</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background: linear-gradient(270deg, #ff4b8b, #9b51e0, #4b8bff, #b967ff);
+      background-size: 800% 800%;
+      animation: gradientMove 12s ease infinite;
+      padding: 20px;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      text-align: center;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 450px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease-in-out;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-container {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      border-radius: 12px;
+      animation: logoGlow 4s ease-in-out infinite;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* وميض لطيف على الشعار */
+    @keyframes logoGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.3)); 
+        transform: scale(1);
+      }
+      50% { 
+        filter: drop-shadow(0 0 25px rgba(255, 0, 127, 0.8)); 
+        transform: scale(1.03);
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f9f9f9;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #ffeb3b;
+      font-weight: 600;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff007f, #9b51e0, #4b8bff);
+      background-size: 300% 300%;
+      color: #fff;
+      padding: 16px 40px;
+      margin-top: 25px;
+      border-radius: 50px;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      animation: buttonGlow 4s ease-in-out infinite, pulse 2.5s infinite;
+      box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .cta-button:hover:after {
+      transform: translateX(0);
+    }
+
+    /* تأثير توهج متعدد الألوان */
+    @keyframes buttonGlow {
+      0% { background-position: 0% 50%; box-shadow: 0 0 15px #ff007f; }
+      25% { background-position: 50% 50%; box-shadow: 0 0 20px #9b51e0; }
+      50% { background-position: 100% 50%; box-shadow: 0 0 25px #4b8bff; }
+      75% { background-position: 50% 50%; box-shadow: 0 0 20px #b967ff; }
+      100% { background-position: 0% 50%; box-shadow: 0 0 15px #ff007f; }
+    }
+
+    /* نبض ناعم للزر */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 0, 127, 0.8);
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .benefit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .benefit-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .benefit-text {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #ddd;
+      margin-top: 25px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="https://i.ibb.co/8LbpF1Dm/834655ef-d996-45a0-9205-4caf78817e26.png" alt="BeSexy Logo" class="logo">
+    </div>
+    <h1>Join BeSexy Today!</h1>
+    <p>Create your free account in just <span class="highlight">two quick steps</span>. Check your email to verify your registration — and start enjoying BeSexy instantly!</p>
+    
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-text">Quick Setup</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🔒</div>
+        <div class="benefit-text">Secure</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">✨</div>
+        <div class="benefit-text">Instant Access</div>
+      </div>
+    </div>
+    
+    <!-- رابط التسجيل تم إضافته هنا -->
+    <a href="https://savebig.pro/a/31ORms7pWc27q3" class="cta-button" target="_blank">Sign Up Now</a>
+    
+    <p class="footer">Your information is secure and will only be used for account activation purposes.</p>
+  </div>
+
+  <script>
+    // التأكد من تحميل الصورة بشكل صحيح
+    document.addEventListener('DOMContentLoaded', function() {
+      const logo = document.querySelector('.logo');
+      logo.onload = function() {
+        console.log('تم تحميل الصورة بنجاح!');
+      };
+      logo.onerror = function() {
+        console.log('خطأ في تحميل الصورة. الرابط قد يكون غير صحيح.');
+      };
+    });
+  </script>
+</body>
+</html>
